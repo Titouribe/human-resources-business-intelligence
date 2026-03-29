@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS RRHH_DWH;
+USE RRHH_DWH;
+
+CREATE TABLE IF NOT EXISTS ETL_control (
+    process_id INT AUTO_INCREMENT PRIMARY KEY,
+    process_name VARCHAR(100),
+    execution_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    uploaded_records INT,
+    state VARCHAR(20)
+);
